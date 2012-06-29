@@ -1,0 +1,1 @@
+This sample code requires simplegeo's OAuth library for python to be installed. It can be found on the lib/ directory.
