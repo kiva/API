@@ -10,12 +10,12 @@ consumer_secret = ''
 callback_url = 'oob';
 
 # This is the URL of the protected resource you want to access
-resource_url = 'https://dev-vm-01.kiva.org/sites/kiva_api/v1/my/account.json'
+resource_url = 'https://api.kivaws.org/v1/my/account.json'
 
 # These should stay the same, probably
-request_token_url = 'https://dev-vm-01.kiva.org/sites/kiva_api/oauth/request_token.json'
-authorize_url = 'http://dev-vm-01.kiva.org/httpdocs/oauth/authorize?response_type=code&oauth_callback='+resource_url+'&client_id='+consumer_key+'&type=web_server'
-access_token_url = 'https://dev-vm-01.kiva.org/sites/kiva_api/oauth/access_token.json'
+request_token_url = 'https://api.kivaws.org/oauth/request_token.json'
+authorize_url = 'https://www.kiva.org/oauth/authorize?response_type=code&oauth_callback='+resource_url+'&client_id='+consumer_key+'&type=web_server'
+access_token_url = 'https://api.kivaws.org/oauth/access_token.json'
 
 # Leave everything below this line alone
 consumer = oauth.Consumer(consumer_key, consumer_secret)
