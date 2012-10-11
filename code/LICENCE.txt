@@ -1,6 +1,6 @@
 Copyright (C) 2012 Kiva Microfunds 
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software subject to the terms and conditions of the Kiva AFI Terms of Use (http://build.kiva.org/docs/tos) and this additional license.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software subject to the terms and conditions of the Kiva API Terms of Use (http://build.kiva.org/docs/tos) and this additional license.
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
