@@ -7,8 +7,8 @@ require 'net/http'
 require 'net/https'
 
 auth={}
-auth["consumer_key"]    = 'wAxrzzrhteupxDyn'
-auth["consumer_secret"] = 'wzrkFvCvwOIetouJuqCuzojypxDtDcQB'
+auth["consumer_key"]    = ''
+auth["consumer_secret"] = ''
 
 event_url = "https://dev-vm-01.kiva.org/sites/kiva_api/oauth/request_token.json"
 path = "/sites/kiva_api/oauth/request_token.json"
