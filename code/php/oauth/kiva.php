@@ -13,7 +13,7 @@ $resource_url = 'https://api.kivaws.org/v1/my/account.json';
 
 // These should stay the same, probably
 $request_token_url = 'https://api.kivaws.org/oauth/request_token.json';
-$authorization_url = 'https://www.kiva.org/oauth/authorize?response_type=code&client_id='.$key.'&type=web_server';
+$authorization_url = 'https://www.kiva.org/oauth/authorize?response_type=code&client_id='.$key;
 $access_token_url = 'https://api.kivaws.org/oauth/access_token.json';
 
 // Leave everything below this line alone
@@ -39,7 +39,7 @@ $request_token_response = file_get_contents($req_arr[0], false, $context);
 $request_token_obj = json_decode($request_token_response);
 
 if ($request_token_obj) {
-  $request_token = new OAuthConsumer($request_token_obj->oauth_token, $request_token_obj->oauth_token_secret);
+  $request_token = new OAuthConsumer($request_token_obj->oauth_token, $request_token_obj->oauth_token_secret, $callback_url);
 } else {
   die('Error fetching request token');
 }
