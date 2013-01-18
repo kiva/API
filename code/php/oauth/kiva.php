@@ -21,7 +21,7 @@ $sig_method = new OAuthSignatureMethod_HMAC_SHA1();
 $consumer = new OAuthConsumer($key, $secret, NULL);
 
 // Get the request token
-$req_req = OAuthRequest::from_consumer_and_token($consumer, NULL, "POST", $request_token_url);
+$req_req = OAuthRequest::from_consumer_and_token($consumer, NULL, "POST", $request_token_url, array('oauth_callback' => $callback_url));
 $req_req->sign_request($sig_method, $consumer, NULL);
 
 $req_arr = preg_split('/\?/',$req_req);
