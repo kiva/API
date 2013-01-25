@@ -13,7 +13,7 @@ callback_url = 'oob';
 resource_url = 'https://api.kivaws.org/v1/my/account.json'
 
 # These should stay the same, probably
-request_token_url = 'https://api.kivaws.org/oauth/request_token.json'
+request_token_url = 'https://api.kivaws.org/oauth/request_token.json?oauth_callback='+callback_url
 authorize_url = 'https://www.kiva.org/oauth/authorize?response_type=code&oauth_callback='+resource_url+'&client_id='+consumer_key+'&type=web_server'
 access_token_url = 'https://api.kivaws.org/oauth/access_token.json'
 
