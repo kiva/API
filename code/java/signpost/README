@@ -1,0 +1,7 @@
+Warning: It doesn't work! After getting the request token, it fails in
+retrieving the access token
+
+Edit file src/main/resources/signpost.properties with your Kiva
+application key and secret.
+
+Run ./run.sh
