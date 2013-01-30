@@ -1,3 +1,3 @@
 #!/bin/sh
 
-mvn exec:java -Dexec.mainClass="org.kiva.api.KivaApiExampleWithSignPost"
+mvn compile exec:java -Dexec.mainClass="org.kiva.api.KivaApiExampleWithSignPost"
