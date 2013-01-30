@@ -1,0 +1,6 @@
+Warning: It doesn't work! I can't get it to request the token
+
+Edit file src/main/resources/kiva.properties with your Kiva
+application key and secret.
+
+Run ./run.sh
