@@ -2,38 +2,24 @@ package org.kiva.api;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.util.Properties;
 import java.util.Scanner;
 
 
 import org.apache.commons.io.IOUtil;
-import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.DefaultHttpRequestFactory;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import oauth.signpost.OAuth;
 import oauth.signpost.OAuthConsumer;
 import oauth.signpost.OAuthProvider;
-import oauth.signpost.OAuthProviderListener;
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import oauth.signpost.commonshttp.CommonsHttpOAuthProvider;
 import oauth.signpost.exception.OAuthCommunicationException;
 import oauth.signpost.exception.OAuthExpectationFailedException;
 import oauth.signpost.exception.OAuthMessageSignerException;
 import oauth.signpost.exception.OAuthNotAuthorizedException;
-import oauth.signpost.http.HttpParameters;
-import oauth.signpost.signature.QueryStringSigningStrategy;
-import oauth.signpost.signature.SigningStrategy;
-
-/**
- * This is not working!!!
- * If someone manages to make it work let us know.
- * Relating issue with Digg: https://groups.google.com/forum/?fromgroups#!topic/diggapi/DxlMk0zZglo
- */
 
 public class KivaApiExampleWithSignPost {
 	public static final String RESOURCE_URL = "https://api.kivaws.org/v1/my/account.json";
