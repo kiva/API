@@ -1,8 +1,10 @@
 package org.kiva.api;
 
+import java.io.InputStream;
+import java.util.Properties;
+
 import org.kiva.api.scribe.KivaApi;
 import org.scribe.builder.ServiceBuilder;
-import org.scribe.model.SignatureType;
 import org.scribe.model.Token;
 import org.scribe.oauth.OAuthService;
 
@@ -13,7 +15,7 @@ public class KivaApiExampleWithScribe {
 
 	public static void testScribe() throws Exception {
                 Properties prop = new Properties();
-                InputStream in = KivaApiExampleWithSignPost.class.getResourceAsStream("/kiva.properties");
+                InputStream in = KivaApiExampleWithScribe.class.getResourceAsStream("/kiva.properties");
                 prop.load(in);
                 String consumerKey = prop.getProperty("oauth.consumer.key");
                 String consumerSecret = prop.getProperty("oauth.consumer.secret");
@@ -26,7 +28,6 @@ public class KivaApiExampleWithScribe {
 					.apiSecret(consumerSecret)
 				        .callback("oob")
 					.debug()
-//							        .signatureType(SignatureType.Header)
 					.build();
 		Token token = service.getRequestToken();
 	}
