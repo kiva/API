@@ -13,7 +13,7 @@ $resource_url = 'https://api.kivaws.org/v1/my/account.json';
 
 // These should stay the same, probably
 $request_token_url = 'https://api.kivaws.org/oauth/request_token.json';
-$authorization_url = 'https://www.kiva.org/oauth/authorize?response_type=code&client_id='.$key;
+$authorization_url = 'https://www.kiva.org/oauth/authorize?response_type=code&client_id='.$key.'&scope=user_balance,user_email';
 $access_token_url = 'https://api.kivaws.org/oauth/access_token.json';
 
 // Leave everything below this line alone
