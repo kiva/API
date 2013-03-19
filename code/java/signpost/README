@@ -1,0 +1,4 @@
+Edit file src/main/resources/signpost.properties with your Kiva
+application key and secret.
+
+Run ./run.sh
