@@ -8,7 +8,7 @@ import org.scribe.utils.Preconditions;
 
 public class KivaApi extends DefaultApi10a
 {
-  private static final String AUTHORIZE_URL = "https://www.kiva.org/oauth/authorize?response_type=code&type=web_server&oauth_token=%s&oauth_callback=oob";
+  private static final String AUTHORIZE_URL = "https://www.kiva.org/oauth/authorize?response_type=code&oauth_token=%s&oauth_callback=oob&scope=access,user_balance,user_email";
 
   @Override
   public String getAccessTokenEndpoint()

@@ -26,7 +26,7 @@ public class KivaApiExampleWithSignPost {
 	public static final String CALLBACK_URL = "oob";
 	public static final String REQUEST_TOKEN_URL = "https://api.kivaws.org/oauth/request_token";
 	public static final String ACCESS_TOKEN_URL = "https://api.kivaws.org/oauth/access_token";
-	public static final String AUTHORIZATION_URL = "https://www.kiva.org/oauth/authorize?response_type=code&type=web_server&oauth_callback=" + CALLBACK_URL + "&scope=access,user_balance,user_email";
+	public static final String AUTHORIZATION_URL = "https://www.kiva.org/oauth/authorize?response_type=code&oauth_callback=" + CALLBACK_URL + "&scope=access,user_balance,user_email";
 	
 	public static void test1() throws OAuthMessageSignerException, OAuthNotAuthorizedException, OAuthExpectationFailedException, OAuthCommunicationException, IOException {
 		Properties prop = new Properties();
