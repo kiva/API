@@ -29,7 +29,7 @@ client = oauth.Client(consumer)
 resp, content = client.request(request_token_url, "POST")
 
 if resp['status'] != '200':
-    raise Exception("Invalid response %s." % resp['status'])
+    raise Exception("Invalid response. Status: "+resp['status']+" Message: "+content)
 
 request_token = dict(json.loads(content))
 
@@ -61,6 +61,9 @@ token.set_verifier(oauth_verifier)
 client = oauth.Client(consumer, token)
 
 resp, content = client.request(access_token_url, "POST")
+
+if resp['status'] != '200':
+    raise Exception("Invalid response. Status: "+resp['status']+" Message: "+content)
 
 access_token = dict(json.loads(content))
 
@@ -94,5 +97,8 @@ signature_method = oauth.SignatureMethod_HMAC_SHA1()
 req.sign_request(signature_method, consumer, token)
 client = oauth.Client(consumer, token)
 resp, content = client.request(resource_url, "GET")
+
+if resp['status'] != '200':
+    raise Exception("Invalid response. Status: "+resp['status']+" Message: "+content)
 
 print content
