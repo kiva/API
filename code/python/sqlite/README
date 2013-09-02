@@ -1,0 +1,7 @@
+This is an example of using the Kiva API's default HTML response
+
+It uses Beautiful Soup to parse the html: http://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
+It uses SQLite3 to create a database and insert the data retrieved from the partners endpoint in the API.
+
+I wanted to brush up on some Python and SQLite usage and thus this example. Pull requests welcome.
