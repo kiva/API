@@ -1,0 +1,16 @@
+<p>
+  <label>Client Id:</label>
+  <%= text_field_tag 'settings[oauth_client_id]', @settings[:oauth_client_id] %>
+</p>
+<p>
+  <label>Client Secret:</label>
+  <%= text_field_tag 'settings[oauth_client_secret]', @settings[:oauth_client_secret] %>
+</p>
+<p>
+  <label>Callback Url:</label>
+  <%= text_field_tag 'settings[oauth_callback_url]', @settings[:oauth_callback_url] %>
+</p>
+<p>
+  <label>OAuth Enabled:</label>
+  <%= check_box_tag 'settings[oauth]', true, @settings[:oauth] %>
+</p>
