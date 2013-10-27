@@ -1,9 +1,9 @@
+Pre-requistes: You must either install the oauth and json gem or include it in your Gemfile 
+
 This is a semi-functional implementation of authenticating using OAuth and Kiva in Ruby.
 
-This code in particular is used in a Redmine plugin to authenticate Kiva users.
+It will put the information it retrieves from the API into a user's session, currently just their e-mail, and display it at the end.
 
-There are several dependencies including needing to properly setup your database to handle token storage for OAuth 1.0a
-
-NOTE: This example will not work for you out of the box, you will need to tailor it to your app, but I hope this will be a good starting point for developers who want to use Ruby & OAuth & Kiva.
+NOTE: You'll want to copy oauth_controller.rb to your app/controllers/ folder and oauth_controller.html.erb to your app/views controller, and add the two routes listed in routes.rb to your config/routes.rb file
 
 Pull requests happily accepted.
