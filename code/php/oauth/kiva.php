@@ -3,14 +3,15 @@ const ACCESS_TOKEN_PATH="/tmp/api-vm-accessToken.txt";
 require_once("lib/OAuth.php");
 
 // You need to set these
-$key = 'com.your.app.name';
-$secret = 'your secret';
+$key = 'harry.test';
+$secret = 'ntpBAqorGAooPmDnLwPgnpykwBAsgkyA';
 
 // If you have set up a callback URL at build.kiva.org, you should enter it below. Otherwise leave it as 'oob'
 $callback_url = 'oob';
 
 // This is the URL of the protected resource you want to access
 $resource_url = 'https://api-vm.kiva.org/v1/my/account.json';
+//$resource_url = 'https://api-vm.kiva.org/';
 //$resource_url = 'https://api-vm.kiva.org/v1/my/expected_repayments.json';
 
 // These should stay the same, probably
@@ -93,6 +94,7 @@ $resource_obj = json_decode($resource_response);
 
 if ($resource_obj) {
 	echo "The user account object:\n\n";
+	print_r($resource_obj);
 } else {
 	die('Error fetching resource');
 }
