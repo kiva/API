@@ -3,8 +3,8 @@ const ACCESS_TOKEN_PATH="/tmp/api-vm-accessToken.txt";
 require_once("lib/OAuth.php");
 
 // You need to set these
-$key = 'harry.test';
-$secret = 'ntpBAqorGAooPmDnLwPgnpykwBAsgkyA';
+$key = 'com.your.test.name';
+$secret = 'aSeCRETthatISgivenToyou';
 
 // If you have set up a callback URL at build.kiva.org, you should enter it below. Otherwise leave it as 'oob'
 $callback_url = 'oob';
