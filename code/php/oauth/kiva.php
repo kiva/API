@@ -1,5 +1,5 @@
 <?php
-const ACCESS_TOKEN_PATH="/tmp/api-vm-accessToken.txt";
+const ACCESS_TOKEN_PATH="~/.kiva-access-token";
 require_once("lib/OAuth.php");
 
 // You need to set these
@@ -10,14 +10,12 @@ $secret = 'aSeCRETthatISgivenToyou';
 $callback_url = 'oob';
 
 // This is the URL of the protected resource you want to access
-$resource_url = 'https://api-vm.kiva.org/v1/my/account.json';
-//$resource_url = 'https://api-vm.kiva.org/';
-//$resource_url = 'https://api-vm.kiva.org/v1/my/expected_repayments.json';
+$resource_url = 'https://api.kivaws.org/v1/my/account.json';
 
 // These should stay the same, probably
-$request_token_url = 'https://api-vm.kiva.org/oauth/request_token.json';
-$authorization_url = 'https://dev-vm-01.kiva.org/oauth/authorize?response_type=code&client_id='.$key.'&type=web_server';
-$access_token_url = 'https://api-vm.kiva.org/oauth/access_token.json';
+$request_token_url = 'https://api.kivaws.org/oauth/request_token.json';
+$authorization_url = 'https://www.kiva.org/oauth/authorize?response_type=code&client_id='.$key.'&type=web_server';
+$access_token_url = 'https://api.kivaws.org/oauth/access_token.json';
 
 // Leave everything below this line alone
 $sig_method = new OAuthSignatureMethod_HMAC_SHA1();
