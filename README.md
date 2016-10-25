@@ -1,7 +1,7 @@
-#H2 Code Samples
+## Code Samples
 
 This repository contains code samples for accessing Kiva's API
 
-#H2 Documentation
+## Documentation
 
 Kiva's API documentation is available at http://build.kiva.org/docs/
