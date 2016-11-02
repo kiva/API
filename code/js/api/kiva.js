@@ -15,7 +15,7 @@ function getParameterByName(name) {
 function makeListItems(key, val) {
 	var items = [];
 
-	items.push('<li><b>' + key + '</b><ul>');
+	items.push('<li class="' + key + '"><b>' + key + '</b><ul class="' + key + '_item">');
 
 	$.each(val, function(key, val) {
 		if (typeof(val) == 'object') {
@@ -74,7 +74,7 @@ $(document).ready(function() {
 			.appendTo('#content');
 
 		// Create links to loan pages
-		$('.id').each(function () {
+		$('ul.Loans_item > li > ul > li.id').each(function () {
 			$(this).wrapInner('<a href="index.html?loan_id='+$(this).text().substring(4,$(this).text().length)+'" />');
 		});
 	});
