@@ -60,18 +60,20 @@ $(document).ready(function() {
 		$('#content').html(items.join(''));
 
 		// Pagination
-		var prev_page = '';
-		if (data.paging.page > 1) {
-			prev_page = '<a href="index.html?page='+(data.paging.page-1)+'">Previous Page</a>';
-		}
+		if (typeof(data.paging) != "undefined") {
+			var prev_page = '';
+			if (data.paging.page > 1) {
+				prev_page = '<a href="index.html?page='+(data.paging.page-1)+'">Previous Page</a>';
+			}
 
-		var next_page = '';
-		if (data.paging.page < data.paging.pages) {
-			next_page = '<a href="index.html?page='+(data.paging.page+1)+'">Next Page</a>';
-		}
+			var next_page = '';
+			if (data.paging.page < data.paging.pages) {
+				next_page = '<a href="index.html?page='+(data.paging.page+1)+'">Next Page</a>';
+			}
 
-		$('<div/>').html(prev_page+' '+data.paging.page+' of '+data.paging.pages+' '+next_page)
-			.appendTo('#content');
+			$('<div/>').html(prev_page+' '+data.paging.page+' of '+data.paging.pages+' '+next_page)
+				.appendTo('#content');
+		}
 
 		// Create links to loan pages
 		$('ul.Loans_item > li > ul > li.id').each(function () {
