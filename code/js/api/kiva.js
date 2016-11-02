@@ -33,6 +33,8 @@ function makeListItems(key, val) {
 $(document).ready(function() {
 	var page = '';
 	var loan_id = '';
+	var url;
+	var title;
 
 	// Get page parameter from URL
 	if (page = getParameterByName('page')) {
