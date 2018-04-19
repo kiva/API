@@ -15,7 +15,7 @@ function getParameterByName(name) {
 function makeListItems(key, val) {
 	var items = [];
 
-	items.push('<li><b>' + key + '</b><ul>');
+	items.push('<li class="' + key + '"><b>' + key + '</b><ul class="' + key + '_item">');
 
 	$.each(val, function(key, val) {
 		if (typeof(val) == 'object') {
@@ -33,6 +33,8 @@ function makeListItems(key, val) {
 $(document).ready(function() {
 	var page = '';
 	var loan_id = '';
+	var url;
+	var title;
 
 	// Get page parameter from URL
 	if (page = getParameterByName('page')) {
@@ -60,21 +62,23 @@ $(document).ready(function() {
 		$('#content').html(items.join(''));
 
 		// Pagination
-		var prev_page = '';
-		if (data.paging.page > 1) {
-			prev_page = '<a href="index.html?page='+(data.paging.page-1)+'">Previous Page</a>';
-		}
+		if (typeof(data.paging) != "undefined") {
+			var prev_page = '';
+			if (data.paging.page > 1) {
+				prev_page = '<a href="index.html?page='+(data.paging.page-1)+'">Previous Page</a>';
+			}
 
-		var next_page = '';
-		if (data.paging.page < data.paging.pages) {
-			next_page = '<a href="index.html?page='+(data.paging.page+1)+'">Next Page</a>';
-		}
+			var next_page = '';
+			if (data.paging.page < data.paging.pages) {
+				next_page = '<a href="index.html?page='+(data.paging.page+1)+'">Next Page</a>';
+			}
 
-		$('<div/>').html(prev_page+' '+data.paging.page+' of '+data.paging.pages+' '+next_page)
-			.appendTo('#content');
+			$('<div/>').html(prev_page+' '+data.paging.page+' of '+data.paging.pages+' '+next_page)
+				.appendTo('#content');
+		}
 
 		// Create links to loan pages
-		$('.id').each(function () {
+		$('ul.Loans_item > li > ul > li.id').each(function () {
 			$(this).wrapInner('<a href="index.html?loan_id='+$(this).text().substring(4,$(this).text().length)+'" />');
 		});
 	});
